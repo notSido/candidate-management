@@ -63,10 +63,13 @@ def add_line_csv():
       writer.writerow(data)
 
 def retrieve_candidate():
-  candidate_name = 'John Doe'
+  candidate_name = input("Enter the Candidate's Name: ")
   filename = 'maze.csv'
   
   with open(filename, 'r') as fileObject:
     reader_obj = csv.reader(fileObject)
     for row in reader_obj:
-      print(row[0])
+      if row[0] == candidate_name:
+        print('Name: ' + row[0] + '\nDate of Birth: ' + row[1] + '\nHeight (cm): ' + row[2] + '\nWeight (kg): ' + row[3] + '\nCar?: ' + row[4] + '\nLanguages: ' + row[5])
+
+retrieve_candidate()
