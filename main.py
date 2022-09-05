@@ -70,4 +70,3 @@ def retrieve_candidate():
     reader_obj = csv.reader(fileObject)
     for row in reader_obj:
       print(row[0])
-remove_csv()
