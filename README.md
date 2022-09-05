@@ -25,4 +25,5 @@ i'll provide an example how converted csv should look like
 e.g. you choose one action something happens, you choose another one something else happens. the code stops working when you enter a specific character
 
 Use Instructions:
+
 for anyone who is not either me or maze, you can run this program by downloading the JSON and main.py files and running the "convert()" function, this creates a CSV file based on data taken from the JSON file. I promise i'll do proper in-code documentation when i get around to it, i don't have the time to make the code pretty.
