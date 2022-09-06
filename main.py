@@ -6,18 +6,20 @@ import pandas as pd
 from csv import DictReader 
 
 def convert():
-    df = pd.read_json (r'maze_2.json')
-    df.to_csv (r'maze.csv', index = None)
+  df = pd.read_json (r'maze_2.json')
+  df.to_csv (r'maze.csv', index = None)
+  print('Successfully created a CSV File')
+
 
 def remove_csv():
     #check if file exists and delete it if it does
     #this is just to clean up the process
-    filename = 'maze.csv'
-    if path.isfile(filename) is True:
-      os.remove(filename)
-      print('Successfully removed CSV file')
-    else:
-      raise Exception('File not found')
+  filename = 'maze.csv'
+  if path.isfile(filename) is True:
+    os.remove(filename)
+    print('Successfully removed CSV file')
+  else:
+    raise Exception('File not found')
     
 
 def add_candidate(): 
@@ -71,5 +73,21 @@ def retrieve_candidate():
     for row in reader_obj:
       if row[0] == candidate_name:
         print('Name: ' + row[0] + '\nDate of Birth: ' + row[1] + '\nHeight (cm): ' + row[2] + '\nWeight (kg): ' + row[3] + '\nCar?: ' + row[4] + '\nLanguages: ' + row[5])
+def menu():
+  print('1: Convert JSON File to CSV File \n2: Delete existing CSV file \n3: Add a new Candidate to JSON File \n4: Add a new Candidate to CSV File \n5: Retrieve Information about a Candidate')
+  selection = int(input('Select your desired Operation: '))
 
-retrieve_candidate()
+  if selection == 1:
+    convert()
+  elif selection == 2:
+    remove_csv()
+  elif selection == 3:
+    add_candidate()
+  elif selection == 4:
+    add_line_csv()
+  elif selection == 5:
+    retrieve_candidate()
+  else:
+    raise Exception('Invalid Input')
+
+menu()
