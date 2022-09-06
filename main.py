@@ -72,8 +72,7 @@ def retrieve_candidate():
     reader_obj = csv.reader(fileObject)
     for row in reader_obj:
       if row[0] == candidate_name:
-        print('Name: ' + row[0] + '\nDate of Birth: ' + row[1] + '\nHeight (cm): ' + row[2] + '\nWeight (kg): ' + row[3] + '\nCar?: ' + row[4] + '\nLanguages: ' + row[5])
-        print('\n')
+        print('\n##########' + '\nName: ' + row[0] + '\nDate of Birth: ' + row[1] + '\nHeight (cm): ' + row[2] + '\nWeight (kg): ' + row[3] + '\nCar?: ' + row[4] + '\nLanguages: ' + row[5] + '\n' + '##########\n')
 def menu():
   print('1: Convert JSON File to CSV File \n2: Delete existing CSV file \n3: Add a new Candidate to JSON File \n4: Add a new Candidate to CSV File \n5: Retrieve Information about a Candidate \n6: Exit')
   selection = int(input('Select your desired Operation: '))
