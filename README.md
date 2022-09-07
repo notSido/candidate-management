@@ -1,4 +1,4 @@
-# maze-is-a-sadist
+# candidate-management
 Homework assignment from my good friend maze which is already long overdue
 
 
